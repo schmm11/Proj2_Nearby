@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 mIsAdvertising = false;
-                                Log.d(TAG,"startAdvertising failed");
+                                Log.d(TAG,"startAdvertising failed e: " +e);
                             }
                         });
     }
@@ -214,6 +214,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         long timestamp = System.currentTimeMillis();
         sensorResult += "TS;" + timestamp + "; x;" + mAccelGravityData[0] + "; y; "  + mAccelGravityData[1] + ";z;" + mAccelGravityData[2] + System.getProperty("line.separator");
         this.amount++;
+
 
         //hier For Schleife
         if(amount % 6 == 0) {

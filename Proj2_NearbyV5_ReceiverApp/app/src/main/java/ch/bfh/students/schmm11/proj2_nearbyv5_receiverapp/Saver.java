@@ -48,14 +48,14 @@ public class Saver {
             BufferedWriter fbw = new BufferedWriter(writer);
 
             fbw.append(str);
-            fbw.newLine();
+            //fbw.newLine();
 
             fbw.flush();
             fbw.close();
 
             fileOutputStream.flush();
             fileOutputStream.close();
-
+            Log.d(TAG,"Data Saved");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
